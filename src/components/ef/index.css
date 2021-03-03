@@ -65,8 +65,8 @@
 .ef-node-container {
     position: absolute;
     display: flex;
-    width: 170px;
-    height: 32px;
+    width: 270px;
+    /* height: 32px; */
     border: 1px solid #E0E3E7;
     border-radius: 5px;
     background-color: #fff;

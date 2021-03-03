@@ -39,6 +39,7 @@
                             @changeNodeSite="changeNodeSite"
                             @nodeRightMenu="nodeRightMenu"
                             @clickNode="clickNode"
+                            @deleteNode="deleteNode"
                     >
                     </flow-node>
                 </template>

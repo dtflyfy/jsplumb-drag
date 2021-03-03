@@ -23,7 +23,7 @@
                         <el-input v-model="node.top" :disabled="true"></el-input>
                     </el-form-item>
                     <el-form-item label="ico图标">
-                        <el-input v-model="node.ico"></el-input>
+                        <el-input v-model="node.entrance"></el-input>
                     </el-form-item>
                     <el-form-item label="状态">
                         <el-select v-model="node.state" placeholder="请选择">
@@ -113,7 +113,7 @@
                         node.name = this.node.name
                         node.left = this.node.left
                         node.top = this.node.top
-                        node.ico = this.node.ico
+                        node.entrance = this.node.entrance
                         node.state = this.node.state
                         node.hello = thsi.node.hello
                         this.$emit('repaintEverything')

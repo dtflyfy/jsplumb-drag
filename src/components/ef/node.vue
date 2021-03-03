@@ -24,16 +24,17 @@
             <i class="el-icon-loading el-node-state-running" v-show="node.state === 'running'"></i>
         </div> -->
         <div class="entrance" flow-node-drag>
-            <i :class="entranceClass"></i>
-            <!-- <el-input class="input" v-model="node.serviceName" placeholder="请输入节点名称"></el-input>
+            <!-- <i :class="entranceClass"></i>
+            <el-input class="input" v-model="node.serviceName" placeholder="请输入节点名称"></el-input>
             <el-input class="input" v-model="node.name2" placeholder="请输入灵犀页面id"></el-input>
-            <el-input class="input" v-model="node.name3" placeholder="请输入最高qps"></el-input> -->
-        <!-- <el-card class="box-card" ref="card"> -->
-        <!-- <div slot="header" class="clearfix"> -->
-          <!-- <span>业务入口</span> -->
-          <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
-        <!-- </div> -->
-        <!-- <el-form ref="form" :model="form" label-width="80px">
+            <el-input class="input" v-model="node.name3" placeholder="请输入最高qps"></el-input>  -->
+            
+        <el-card class="box-card" ref="card">
+        <div slot="header" class="clearfix">
+          <span>业务入口</span>
+          <el-button style="float: right; padding: 3px 0" type="text" @click="deleteSingleNode">删除</el-button>
+        </div>
+        <el-form ref="form" :model="form" label-width="70px">
           <el-form-item label="*名称">
             <el-input v-model="form.name"></el-input>
           </el-form-item>
@@ -43,8 +44,8 @@
           <el-form-item label="预估流量">
             <el-input v-model="form.name" placeholder="最高qps"></el-input>
           </el-form-item>
-        </el-form> -->
-        <!-- </el-card> -->
+        </el-form>
+       </el-card>
         </div>
     </div>
 </template>
@@ -56,8 +57,13 @@
             activeElement: Object
         },
         data(){
-        return {}
+        return {
+            form:{
+                name:''
+            },
+        }
         },
+    
         computed: {
             nodeContainerClass() {
                 return {
@@ -91,6 +97,11 @@
             clickNode() {
                 this.$emit('clickNode', this.node.id)
             },
+
+            // 删除节点
+            deleteSingleNode(){
+                this.$emit('deleteNode',this.node.id)
+            },
             // 鼠标移动后抬起
             changeNodeSite() {
                 // 避免抖动
@@ -119,10 +130,13 @@
   .entrance {
       overflow: auto;
       background-color : rgb(156, 155, 155) ;
-      height: 150px;
-      width: 300px;
+    //   height: 150px;
+      width: 500px;
   }
   .input{
       width:260px;
+  }
+  .el-card__body{
+      padding: 10px;
   }
 </style>
