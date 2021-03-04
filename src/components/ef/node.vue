@@ -24,8 +24,8 @@
             <i class="el-icon-loading el-node-state-running" v-show="node.state === 'running'"></i>
         </div> -->
         <div class="entrance" flow-node-drag>
-            <!-- <i :class="entranceClass"></i>
-            <el-input class="input" v-model="node.serviceName" placeholder="请输入节点名称"></el-input>
+            <i :class="entranceClass"></i>
+            <!-- <el-input class="input" v-model="node.serviceName" placeholder="请输入节点名称"></el-input>
             <el-input class="input" v-model="node.name2" placeholder="请输入灵犀页面id"></el-input>
             <el-input class="input" v-model="node.name3" placeholder="请输入最高qps"></el-input>  -->
             

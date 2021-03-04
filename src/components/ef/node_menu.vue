@@ -49,14 +49,14 @@
                                 id: '11',
                                 type: 'timer',
                                 name: '业务入口',
-                                entrance: 'el-icon-time',
+                                entrance: '',
                                 // 自定义覆盖样式
                                 style: {}
                             }, {
                                 id: '12',
                                 type: 'task',
                                 name: '服务入口',
-                                entrance: 'el-icon-odometer',
+                                entrance: '',
                                 // 自定义覆盖样式
                                 style: {}
                             }
